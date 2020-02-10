@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/lucasltv/simple-node-websocket/issues"
   },
-  "homepage": "https://github.com/lucasltv/simple-node-websocket#readme"
+  "homepage": "https://github.com/lucasltv/simple-node-websocket#readme",
+  "dependencies": {
+    "ws": "^7.2.1"
+  }
 }
