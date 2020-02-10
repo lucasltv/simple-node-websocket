@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var url = 'ws://localhost:8080';
+        var connection = new WebSocket(url);
+
+        connection.onopen = (e) => {
+            debugger
+        }
+
+        connection.onerror = error => {
+            console.log(`LOG: error`, error);
+        }
+
+        connection.onopen = () => {
+            connection.send('hey!')
+        }
+
+        connection.onmessage = e => {
+            console.log(e.data)
+        }
+
+        connection.onclose = (e) => {
+            console.log(`LOG: connection.onclose -> e`, e);
+        }
+    </script>
+</body>
+
+</html>
